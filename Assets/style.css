@@ -1,0 +1,166 @@
+:root {
+    --primary: #64a0fa;
+    --secondary: #e2efff;
+    --tetriary: #e4985a;
+    --light: #fffd9a;
+    --dark: #0d2164;
+
+    --margin-y: 2% 0 2% 0;
+    --border: var(--dark) solid 2px;
+    --border-r: 4px;
+}
+
+/* Apply to All */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Fira Sans', sans-serif;
+    color: var(--dark);
+}
+
+/* Background Color */
+body {
+    background-color: var(--secondary);
+}
+
+/* Apply to the header */
+header {
+    display: flex;
+    justify-content: center;
+    padding: 1%;
+    color: var(--dark);
+    font-size: x-large;
+    background-color: var(--primary);
+}
+
+/* Apply between header and footer. Create flex for the two sections */
+main {
+    display: flex;
+    height: 75vh;
+}
+
+/* Search section. Title, Search Bar, Search Btn, and Search History */
+#search {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    padding: .5%;
+    margin: .5%;
+    border-right: var(--border);
+    width: 13vw;
+}
+
+/* Search Title style */
+#search h2 {
+    text-align: center;
+}
+
+/* Search Bar styling and Search Button */
+#search-bar, #search-btn {
+    margin: var(--margin-y);
+    border: var(--border);
+    border-radius: var(--border-r);
+    height: 25px;
+}
+
+/* Search Button styling */
+#search-btn {
+    background-color: var(--primary);
+}
+
+
+/* Search History Title Style */
+#history h3 {
+    margin-top: 5%;
+    text-align: center;
+    border-bottom: var(--border);
+}
+
+/* Search History from JavaScript */
+#history button {
+    display: flex;
+    width: fit-content;
+    padding: 2%;
+    background-color: var(--tetriary);
+    margin: var(--margin-y);
+    border: var(--border);
+    border-radius: var(--border-r);
+}
+
+/* Hover action for the search button and Search History Buttons hover action */
+#search-btn:hover, #history button:hover {
+    cursor: pointer;
+    background-color: var(--light);
+}
+
+/* Results the second section of the Main */
+#results {
+    display: flex;
+    flex-direction: column;
+    width: 70vw;
+    padding: .5%;
+    margin: .5% .5% .5% 5%;
+}
+
+/* First div in the results section direction */
+#city {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3%;
+    border: var(--border);
+    border-radius: var(--border-r);
+    background-color: var(--tetriary);
+}
+
+/* Title in first div of Results section */
+#city h3 {
+    display: flex;
+    justify-content: center;
+    font-size: x-large;
+    margin: 1% 5% 1.5% 5%;
+}
+
+/* P tags underneath the tittle in first div of Results */
+#city p {
+    display: flex;
+    justify-content: center;
+    font-size: large;
+    margin-bottom: 1.5%;
+}
+
+/* Gives the City title and the 5 Day Forecast Title style */
+#results h3 {
+    padding-bottom: .5%;
+    border-bottom: var(--border);
+}
+
+/* Second div in the results sections direction */
+#five-day {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Each Day of the Five Day Forecast Style */
+#five-day div {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.5%;
+    width: 12vw;
+    border: var(--border);
+    border-radius: var(--border-r);
+    background-color: var(--tetriary);
+}
+
+/* Each h4 in each day div */
+#five-day h4 {
+    margin: 3%;
+    font-size: large;
+    font-weight: bold;
+}
+
+/* Each p in each day div */
+#five-day div p {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10%;
+}
