@@ -20,6 +20,7 @@
 
 /* Background Color */
 body {
+    height: fit-content;
     background-color: var(--secondary);
 }
 
@@ -28,9 +29,13 @@ header {
     display: flex;
     justify-content: center;
     padding: 1%;
-    color: var(--dark);
     font-size: x-large;
-    background-color: var(--primary);
+    /* background-color: var(--primary); */
+    background: linear-gradient(
+        120deg,
+        var(--tetriary) 8%,
+        var(--primary) 25%
+    )
 }
 
 /* Apply between header and footer. Create flex for the two sections */
@@ -63,6 +68,10 @@ main {
     height: 25px;
 }
 
+#search-bar {
+    padding-left: 2%;
+}
+
 /* Search Button styling */
 #search-btn {
     background-color: var(--primary);
@@ -70,7 +79,7 @@ main {
 
 
 /* Search History Title Style */
-#history h3 {
+#search h3 {
     margin-top: 5%;
     text-align: center;
     border-bottom: var(--border);
@@ -80,6 +89,7 @@ main {
 #history button {
     display: flex;
     width: fit-content;
+    font-size: 12pt;
     padding: 2%;
     background-color: var(--tetriary);
     margin: var(--margin-y);
@@ -98,6 +108,7 @@ main {
     display: flex;
     flex-direction: column;
     width: 70vw;
+    height: fit-content;
     padding: .5%;
     margin: .5% .5% .5% 5%;
 }
@@ -106,6 +117,7 @@ main {
 #city {
     display: flex;
     flex-direction: column;
+    align-items: center;
     margin-bottom: 3%;
     border: var(--border);
     border-radius: var(--border-r);
@@ -118,6 +130,15 @@ main {
     justify-content: center;
     font-size: x-large;
     margin: 1% 5% 1.5% 5%;
+}
+
+img {
+    width: 65px;
+    height: 65px;
+    border-radius: 15px;
+    box-shadow: #353535 1.5px 1.5px;
+    background-color: var(--primary);
+    margin-bottom: 1.5%;
 }
 
 /* P tags underneath the tittle in first div of Results */
@@ -158,9 +179,27 @@ main {
     font-weight: bold;
 }
 
+/* Img Div Container */
+#five-day div {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10%;
+}
+
+#five-day img {
+    align-self: center;
+    margin-left: 5%;
+    margin-bottom: 5%;
+}
+
 /* Each p in each day div */
 #five-day div p {
     display: flex;
     justify-content: center;
-    margin-bottom: 10%;
+    height: fit-content;
+    margin-bottom: 5%;
+}
+
+footer {
+    text-align: center;
 }
