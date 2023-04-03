@@ -10,7 +10,7 @@ var searchHistory = document.getElementById('history');
 const history = [];
 
 for (i = 0; i < 12; i++) {
-    var startHistory = localStorage.getItem(i);
+    var startHistory = localStorage.getItem('on-the-go-weather'+i);
     if (startHistory !== null) {
         history.push(startHistory);
         // creates button for html
@@ -192,7 +192,7 @@ function setHistory(searchedCity) {
     
     // Set the local storage to each of the index's city name in the array of the history without going over 12.
     for (i = 0; i < history.length; i++) {
-        localStorage.setItem(i, history[i]);
+        localStorage.setItem('on-the-go-weather'+i, history[i]);
     };
 
     // setTimeout(() => {
@@ -205,7 +205,7 @@ function getLocal() {
     // Add Search History Button from local storage..
     for (i = 0; i < 12; i++) {
         // gets value from local storage
-        var cityStored = localStorage.getItem(i);
+        var cityStored = localStorage.getItem('on-the-go-weather'+i);
         // if there is less than 12 from localStorage it will ignore the null values
         if (cityStored !== null) {
             // creates button for html
